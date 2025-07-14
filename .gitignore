@@ -1,0 +1,35 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+node_modules
+__pycache__
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+env/
+venv/
+
+# Bench-specific
+sites/
+*.log
+*.pid
+*.conf
+
+# Node & JS
+node_modules/
+*.tsbuildinfo
+*.lock
+
+# OS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.swp
