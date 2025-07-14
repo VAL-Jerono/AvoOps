@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Delivery Note",
+  "enabled": 0,
+  "modified": "2025-07-14 11:18:26.977899",
+  "module": "Avocado Procurement",
+  "name": "Auto Fetch Route from Outgrower",
+  "script": "frappe.ui.form.on('Delivery Note', {\n    outgrower(frm) {\n        if (frm.doc.outgrower) {\n            frappe.db.get_value('Outgrower', frm.doc.outgrower, 'route')\n                .then(r => {\n                    let route = r.message.route;\n                    if (route) {\n                        frm.set_value('route', route);\n                    }\n                });\n        }\n    }\n});\n",
+  "view": "Form"
+ }
+]

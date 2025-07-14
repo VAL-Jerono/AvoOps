@@ -1,9 +1,32 @@
-app_name = "avocado_system"
+app_name = "Avocado System 🍐"
 app_title = "Avocado System"
 app_publisher = "VonDetta"
 app_description = "ERP system for avocado procurement and processing"
 app_email = "vondetta@gmail.com"
 app_license = "mit"
+app_logo_url = "/assets/avocado_system/images/logo.png"
+
+
+fixtures = [
+    {"doctype": "Custom Field"},
+    {"doctype": "Client Script"},
+    {"doctype": "Workspace", "filters": [["name", "in", ["Avocado Procurement"]]]},
+    {"doctype": "Property Setter"},
+    {"doctype": "Role"},
+    {"doctype": "DocType", "filters": [["name", "in", [
+        "Outgrower",
+        "Route",
+        "Delivery Note",
+        "Delivery Item",
+        "Delivery Payment",
+        "Quality Inspection",
+        "Stock Entry",
+        "Stock Location"
+    ]]]}
+]
+
+
+
 
 # Apps
 # ------------------
